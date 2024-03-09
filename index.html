@@ -5,38 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de consumo de gasolina</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
 </head>
 <body>
-    <h1>Calculadora de consumo de gasolina</h1><br>
-    <h2>Bienvenido(a) a la calculadora de consumo de gasolina</h2>
-    <h3>Instrucciones:</h3>
-    <p>Llena los siguientes campos, para poder calcular el costo del consumo de gasolina que necitas para tu trasporte al trabajo.</p>
-        <div class="container">
-        <form method="post" action="" name="inversión">
-            <h3 class="container__h3">Ingresa los datos de tu trayecto</h3><br>
-        
-            <legend for="costo">Costo del litro de gasolina en tu gasolinera local:</legend>
-            <input type="number" name="costo" min="1" id="costo"></input><br>
-
-            <legend for="litros">Consumo de tu carro de kilometros por litro:</legend>
-            <input type="number" name="litros" min="1" id="litros"></input><br>
-
-            <legend for="kilometros">¿Cuantos kilometros de distancia te haces al trabajo de ida y vuelta?:</legend>
-            <input type="number" name="kilometros" min="1" id="km"></input><br>
-
-            <legend for="dias">¿Cuantos días al mes vas al trabajo?:</legend>
-            <input type="number" name="dias" min="1" id="dias"></input><br>
-            
-            <button class="button" type="button" onclick="mostrar()">Calcular la gasolina</button>
-
-            <script src="JS/simulador de inversiones.js"></script>
-            
+    <div>
+        <h1>Calculadora de consumo de gasolina</h1><br>
+        <h2>Bienvenido(a) a la calculadora de consumo de gasolina</h2>
+        <h3>Instrucciones:</h3>
+        <p>Llena los siguientes campos, para poder calcular el costo del consumo de gasolina que necitas para tu trasporte al trabajo.</p>
+    </div>
+    
+    <div class="container">
+        <form class="formulario" method="post" action="" name="inversión">
+            <fieldset>
+                <legend class="container__legend">Ingresa los datos de tu trayecto</><br>
+                <hr>
+                <div class="container__campos">
+                    <div class="campo">
+                        <label for="costo">Costo del litro de gasolina en tu gasolinera local:</label>
+                        <br>
+                        <input type="number" name="costo" min="1" id="costo"></input>
+                    </div>
+                    <div class="campo">
+                        <label for="litros">Consumo de tu carro de kilometros por litro:</label>
+                        <input type="number" name="litros" min="1" id="litros"></input>
+                    </div>
+                    <div class="campo">
+                        <label for="kilometros">¿Cuantos kilometros de distancia te haces al trabajo de ida y vuelta?:</label>
+                        <input type="number" name="kilometros" min="1" id="km"></input>
+                    </div>
+                    <div class="campo">
+                        <label for="dias">¿Cuantos días al mes vas al trabajo?:</label>
+                        <input type="number" name="dias" min="1" id="dias"></input>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <div>
+                    <button class="button" type="button" onclick="mostrar()">Calcular valor futuro</button>
+                </div>
+            </fieldset>
         </form> 
-        
         <h3 class="container__h3" id="resultado">Resultado</h3>
     </div>
     <footer>
         <h4>Derechos reservados - Irwin Escalante</h4>
     </footer>
+    <script src="JS/simulador de inversiones.js"></script>
 </body>
 </html>
